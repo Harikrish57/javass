@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main{
+  
+  static char ToUpperCase(char c){
+    return (char)(c-32);
+    
+  }
+public static void main(String[] args){
+
+  String a;
+  Scanner s = new Scanner(System.in);
+  a = s.nextLine();
+  
+
+  char [] res = a.toCharArray();
+  res[0]=ToUpperCase(res[0]);
+  int index = 1;
+  for(int i = 1;i < res.length;i++){
+    if(res[i]==' ')
+      res[i+1] = ToUpperCase(res[i+1]);
+    else
+      res[index++]=res[i];
+  }
+  for(int i = 0;i<index;i++){
+    
+System.out.print(res[i]);
+   
+  }
+}
+}
