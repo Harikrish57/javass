@@ -1,0 +1,37 @@
+import java.util.*;
+class Vehicle{
+protected String brand;
+
+
+public Vehicle(String brand){
+this.brand=brand;
+// return brand;
+
+}
+public void display(){
+System.out.print("Driving the "+brand+" ");
+}
+}
+class Car extends Vehicle{
+protected int speed;
+public Car(String brand,int speed){
+super(brand);
+this.speed=speed;
+}
+public void show(){
+System.out.print("Accelerating the car to "+speed+" km/h.");
+}
+}
+public class Main{
+public static void main(String[] args){
+Scanner s = new Scanner(System.in);
+String brand;
+int speed;
+brand=s.next();
+speed = s.nextInt();
+Car c= new Car(brand,speed);
+
+c.display();
+c.show();
+}
+}
