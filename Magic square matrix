@@ -1,0 +1,53 @@
+
+import java.util.*;
+class Main
+{
+public static void main(String str[])
+{
+Scanner sc=new Scanner(System.in);
+Boolean b=true,b1=true;
+int n=sc.nextInt();
+int x=0,y=0,p=0,q=0,sum=0;
+int arr[][]=new int[n][n];
+for(int i=0;i<n;i++)
+{
+for(int j=0;j<n;j++)
+{
+arr[i][j]=sc.nextInt();
+if(i==0)
+p+=arr[i][j];
+if(j==0)
+q+=arr[i][j];
+}
+}
+for(int i=0;i<n;i++)
+x+=arr[i][i];
+for(int i=0;i<n;i++)
+y+=arr[i][n-i-1];
+for(int i=0;i<n;i++)
+{
+sum=0;
+int sum1=0;
+for(int j=0;j<n;j++)
+{
+sum+=arr[i][j];
+}
+if(sum!=p)
+b=false;
+for(int k=0;k<n;k++)
+{
+sum1+=arr[k][i];
+}
+if(sum1!=q)
+b1=false;
+}
+if(x==y && b && b1)
+{
+System.out.print("The matrix is a magic square.");
+}
+else
+{
+System.out.print("The matrix is not a magic square.");
+}
+}
+}
