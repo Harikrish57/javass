@@ -1,0 +1,33 @@
+import java.util.*;
+class Mathmaster{
+void sum(int a,int b){
+System.out.println("Result: "+(a+b));
+}
+void sum(double f, double g){
+System.out.println("Result: "+(f+g));
+}
+void sum(int a,int b,int c){
+System.out.println("Result: "+(a+b+c));
+}
+void sum(int a,int b,int c,int d){
+System.out.println("Result: "+(a+b+c+d));
+}
+}
+public class Main{
+public static void main(String[] args){
+int a,b,c,d;
+double f,g;
+Scanner s = new Scanner(System.in);
+a=s.nextInt();
+b=s.nextInt();
+c=s.nextInt();
+d=s.nextInt();
+f=s.nextDouble();
+g=s.nextDouble();
+Mathmaster m = new Mathmaster();
+m.sum(a,b);
+m.sum(f,g);
+m.sum(a,b,c);
+m.sum(a,b,c,d);
+}
+}
